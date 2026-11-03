@@ -26,14 +26,14 @@ curl -LO https://raw.githubusercontent.com/emmaforge/ech-keygen/main/ech-keygen.
 生成一对密钥，`public_name` 填你想要的域名：
 
 ```bash
-python3 ech-keygen.py cloudflare.jayuu.us.kg
+python3 ech-keygen.py example.com
 ```
 
 默认保存到 `/etc/xboard-node/ech/`（往 `/etc` 下写需要 root 权限，目录不存在会自动创建）。
 想换目录，第二个参数直接指定：
 
 ```bash
-python3 ech-keygen.py cloudflare.jayuu.us.kg /root/ech
+python3 ech-keygen.py example.com /root/ech
 ```
 
 不传 `public_name` 时默认生成 `ech.example.com`。
