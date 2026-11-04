@@ -61,7 +61,8 @@ ECH 设置，全程不落盘、不保存生成的密钥。
 
 安装：把 `EchKeygen` 文件夹复制到面板根目录的 `plugins/` 下，后台插件管理里
 安装并启用，再在插件设置里填一个「页面访问密码」；然后打开
-`https://你的面板域名/ech-keygen` 使用。详细说明见 `EchKeygen/README.md`。
+`https://你的面板域名/ech-keygen` 使用。v1.1.0 起后台仪表盘顶部还会多一张
+「ECH密钥生成」卡片入口（可在插件设置里关掉）。详细说明见 `EchKeygen/README.md`。
 
 插件还带一个管理员接口 `POST /plugin/ech-keygen/generate`（参数 `public_name`，
 返回 JSON），生成算法与面板自带接口逐字节一致。
