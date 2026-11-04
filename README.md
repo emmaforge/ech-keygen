@@ -53,6 +53,19 @@ python3 ech-keygen.py example.com /root/ech
 3. 面板保存后，后端下次同步（一般一分钟左右）会自动重载内核应用新 ECH，不用手动重启服务；
 4. 客户端更新一次订阅，拿到新的 ECH 配置再连接。
 
+## 面板插件版（可选）
+
+仓库里的 `EchKeygen/` 是一个 Xboard 面板插件，装上后不用在服务器上跑脚本，
+直接在面板里打开页面生成：填 public_name → 生成 → 两段 PEM 复制回节点的
+ECH 设置，全程不落盘、不保存生成的密钥。
+
+安装：把 `EchKeygen` 文件夹复制到面板根目录的 `plugins/` 下，后台插件管理里
+安装并启用，再在插件设置里填一个「页面访问密码」；然后打开
+`https://你的面板域名/ech-keygen` 使用。详细说明见 `EchKeygen/README.md`。
+
+插件还带一个管理员接口 `POST /plugin/ech-keygen/generate`（参数 `public_name`，
+返回 JSON），生成算法与面板自带接口逐字节一致。
+
 ## 注意事项
 
 - `ech-keys.pem` 里就是私钥，不要公开、不要发给他人、不要传到公开仓库；

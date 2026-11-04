@@ -1,0 +1,1 @@
+{"author":"emmaforge","code":"ech_keygen","config":{"access_key":{"default":"","description":"打开 ECH 生成页面时要输入的密码，请自行设置一个；留空则生成页面禁用。","label":"页面访问密码","type":"string"}},"description":"在面板里生成 ECH 密钥对时可指定 public_name（面板自带生成固定用 ech.example.com）。启用后打开 /ech-keygen 使用。","name":"ECH 密钥生成器","require":{"xboard":">=1.0.0"},"version":"1.0.0"}
